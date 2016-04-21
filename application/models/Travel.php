@@ -87,4 +87,8 @@ class Travel extends CI_Model {
 		$values = array($user_id, $travel_id);
 		$this->db->query($query, $values);
 	}
+	public function show_by_travel_id($travel_id)
+	{
+		$return $this->db->query("SELECT ALL FROM travels WHERE id = ?", array($travel_id))->row_array();
+	}
 }	

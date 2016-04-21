@@ -1,3 +1,7 @@
+<?php
+var_dump($destinations);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

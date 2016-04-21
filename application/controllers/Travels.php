@@ -32,7 +32,8 @@ class Travels extends CI_Controller {
 	}
 	public function show()
 	{
-		$this->load->view("Travels/travel_plan_details");
+		$destinations = $this->Travel->show_by_travel_id($this->uri->segment(3));
+		$this->load->view("Travels/travel_plan_details", array('destinations' => $destinations));
 	}
 	public function join()
 	{
