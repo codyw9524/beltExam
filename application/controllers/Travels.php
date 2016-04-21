@@ -13,17 +13,29 @@ class Travels extends CI_Controller {
 	{
 		$this->load->view("Travels/travels_main");
 	}
+	public function add()
+	{
+		$this->load->view("Travels/add_travel_plan");
+	}
 	public function create()
 	{
-		if($this->input->post())
+		if($this->Travel->add_trip_validation() === FALSE)
 		{
-			$this->Travel->create($this->input->post());
-			redirect("/Travels/");
+			redirect("/Travels/add");
 		}
 		else
 		{
-			$this->load->view("Travels/add_travel_plan");
+			redirect("/Travels/");
 		}
+		// if($this->input->post())
+		// {
+		// 	$this->Travel->create($this->input->post());
+		// 	redirect("/Travels/");
+		// }
+		// else
+		// {
+			// $this->load->view("Travels/add_travel_plan");
+		// }
 	}
 	public function show()
 	{

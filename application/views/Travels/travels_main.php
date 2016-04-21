@@ -17,7 +17,7 @@
 			<a href="/Sessions/destroy">Log Off</a>
 		</div>
 		<div class="row">
-			<div class="col-md-8">
+			<div class="col-md-8"
 				<h4>Your Trip Schedules</h4>
 			</div>
 		</div><!-- end of row -->
@@ -28,7 +28,7 @@
 		</div><!-- end of row -->
 		<div class="row">
 			<div class="col-md-12">
-				<a class="add_travel_plan_link" href="/Travels/create">Add Travel Plan</a>
+				<a class="add_travel_plan_link" href="/Travels/add">Add Travel Plan</a>
 			</div>
 		</div>
 	</div><!-- end of container -->

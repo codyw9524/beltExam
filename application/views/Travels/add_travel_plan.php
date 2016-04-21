@@ -36,24 +36,28 @@
 						<label for="destination" class="col-sm-3 control-label">Desitnation</label>
 						<div class="col-sm-9">
 							<input type="text" id="destination" name="destination" class="form-control">
+							<?= $this->session->flashdata('destination') ?>
 						</div>
 					</div>
 					<div class="form-group">
 						<label for="description" class="col-sm-3 control-label">Description</label>
 						<div class="col-sm-9">
 							<input type="text" id="description" name="description" class="form-control">
+							<?= $this->session->flashdata('description') ?>
 						</div>
 					</div>
 					<div class="form-group">
 						<label for="start_date" class="col-sm-3 control-label">Start Date</label>
 						<div class="col-sm-9">
 							<input type="text" id="start_date" name="start_date">
+							<?= $this->session->flashdata('start_date') ?>
 						</div>
 					</div>
 					<div class="form-group">
 						<label for="end_date" class="col-sm-3 control-label">End Date</label>
 						<div class="col-sm-9">
 							<input type="text" id="end_date" name="end_date">
+							<?= $this->session->flashdata('end_date') ?>
 						</div>
 					</div>
 					<button id="add_plan_btn" type="submit" class="btn btn-primary">Add Plan</button>
