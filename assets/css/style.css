@@ -19,6 +19,7 @@ p.confirm{
 	.page-header a{
 		float: right;
 		margin-top: 30px;
+		margin-right: 10px;
 	}
 .add_travel_plan_link{
 	font-size: 1.3em;
@@ -26,4 +27,10 @@ p.confirm{
 }
 #add_plan_btn{
 	float: right;
+}
+ul{
+	list-style: none;
+}
+ul li{
+	font-size: 1.5em;
 }
