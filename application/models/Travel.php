@@ -29,7 +29,7 @@ class Travel extends CI_Model {
 			$this->Travel->create($this->input->post());
 			return TRUE;
 		}
-
+	}
 	public function create($post)
 	{
 		$query1 = "INSERT INTO travels (destination, description, start_date, end_date, updated_at, created_at) VALUES (?, ?, ?, ?, NOW(), NOW())";
