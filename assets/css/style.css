@@ -10,3 +10,9 @@ p{
 p.confirm{
 	color: green;
 }
+.page-header h2{
+	display: inline-block;
+}
+.page-header a{
+	float: right;
+}
