@@ -13,7 +13,7 @@
 	<link rel="stylesheet" href="/assets/css/style.css">
 	<script>
 		$(document).ready(function(){
-			$("#start_date").datepicker();
+			$("#start_date").datepicker({minDate : -0});
 			$("#end_date").datepicker();
 		});
 	</script>
