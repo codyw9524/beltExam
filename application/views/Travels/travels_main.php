@@ -20,6 +20,7 @@
 			<div class="col-md-8">
 				<h4>Your Trip Schedules</h4>
 				<?php
+					$travels = [];
 					if(isset($session_user_trips))
 					{
 						echo "<table class='table'>\n";
@@ -33,7 +34,6 @@
 						echo "<tbody>\n";
 						foreach ($session_user_trips as $trip) 
 						{
-							$travels = [];
 							array_push($travels, $trip['travels_id']);
 							echo "<tr>\n";
 							echo "<td><a href='/Travels/show/" . $trip['travels_id'] . "'>" . $trip['destination'] . "</td>\n";
