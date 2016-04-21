@@ -7,7 +7,7 @@ class Travel extends CI_Model {
 	{
 		$query1 = "INSERT INTO travels (destination, description, start_date, end_date, updated_at, created_at) VALUES (?, ?, ?, ?, NOW(), NOW())";
 		$values = array(htmlspecialchars($post['destination']), htmlspecialchars($post['description']), $post['start_date'], $post['end_date']);
-		$this->db->query($query, $values);
+		$this->db->query($query1, $values);
 
 		$travel_id = $this->db->query("SELECT * FROM travels ORDER BY id DESC LIMIT 1")->row_array();
 
