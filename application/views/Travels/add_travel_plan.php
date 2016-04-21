@@ -12,7 +12,7 @@
 	<script>
 		$(document).ready(function(){
 			$("#start_date").datepicker();
-		})
+		});
 	</script>
 </head>
 <body>
@@ -32,9 +32,15 @@
 						</div>
 					</div>
 					<div class="form-group">
-						<label for="description" class="col-sm-3 control-label">Start Date</label>
+						<label for="description" class="col-sm-3 control-label">Description</label>
 						<div class="col-sm-9">
-							<input type="text" id="start_date" name="start_date" class="form-control">
+							<input type="text" id="description" name="description" class="form-control">
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="start_date" class="col-sm-3 control-label">Start Date</label>
+						<div class="col-sm-9">
+							<input type="text" id="start_date" name="start_date">
 						</div>
 					</div>
 				</form>
