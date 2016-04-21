@@ -11,7 +11,8 @@ class Travels extends CI_Controller {
 
 	public function index()
 	{
-		$this->load->view("Travels/travels_main");
+		$session_user_trips = $this->Travel->show_by_user_id($this->session->userdata('user_id'));
+		$this->load->view("Travels/travels_main", array('session_user_trips', $session_user_trips));
 	}
 	public function add()
 	{
