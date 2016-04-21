@@ -1,0 +1,12 @@
+body{
+	background: #EAEAEA;
+}
+#register, #login{
+	float: right;
+}
+p{
+	color: red;
+}
+p.confirm{
+	color: green;
+}
