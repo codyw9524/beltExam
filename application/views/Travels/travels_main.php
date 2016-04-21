@@ -34,7 +34,7 @@
 						echo "<tbody>\n";
 						foreach ($session_user_trips as $trip) 
 						{
-							array_push($trip['travels_id'], $travels);
+							array_push($travels, $trip['travels_id']);
 							echo "<tr>\n";
 							echo "<td><a href='/Travels/show/" . $trip['travels_id'] . "'>" . $trip['destination'] . "</td>\n";
 							echo "<td>" . $trip['start_date'] . "</td>\n";
@@ -68,7 +68,7 @@
 						{
 							echo "<tr>\n";
 							echo "<td>" . $trip['name'] . "</a></td>\n";
-							if(in_array($travels, $trip['travels_id']) === TRUE)
+							if(in_array($trip['travels_id'], $travels) === TRUE)
 							{
 								echo "<td>Joined!</td>\n";
 							}
