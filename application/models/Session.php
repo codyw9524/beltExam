@@ -20,7 +20,7 @@ class Session extends CI_Model {
 		}
 		else
 		{
-			$this->session->set_flashdata('error', "<p class='error'>Email and/or password provided were incorrect</p>");
+			$this->session->set_flashdata('error', "<p class='error'>Username and/or password provided were incorrect</p>");
 		}
 	}	
 }

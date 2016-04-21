@@ -66,9 +66,9 @@
 				</fieldset>
 					<form class="form-horizontal" action="/Sessions/create" method="post">
 					<div class="form-group">
-						<label for="email2" class="col-sm-2 control-label">Email</label>
+						<label for="username2" class="col-sm-2 control-label">Username</label>
 						<div class="col-sm-10">
-							<input type="text" id="email2" name="email" class="form-control">
+							<input type="text" id="username2" name="username2" class="form-control">
 						</div>
 					</div>
 					<div class="form-group">
