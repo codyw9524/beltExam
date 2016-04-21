@@ -9,6 +9,6 @@ class Travels extends CI_Controller {
 	}
 	public function create()
 	{
-		$this->load->view("Travels/add_travel_plan")
+		$this->load->view("Travels/add_travel_plan");
 	}
 }
