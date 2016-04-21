@@ -26,7 +26,7 @@ class Travel extends CI_Model {
 		}
 		else
 		{
-			$this->Travel->create($this->input->post(), $this->session->userdata('user_id');
+			$this->Travel->create($this->input->post(), $this->session->userdata('user_id'));
 			return TRUE;
 		}
 	}
