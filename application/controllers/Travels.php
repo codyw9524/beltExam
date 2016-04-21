@@ -29,18 +29,14 @@ class Travels extends CI_Controller {
 		{
 			redirect("/Travels/");
 		}
-		// if($this->input->post())
-		// {
-		// 	$this->Travel->create($this->input->post());
-		// 	redirect("/Travels/");
-		// }
-		// else
-		// {
-			// $this->load->view("Travels/add_travel_plan");
-		// }
 	}
 	public function show()
 	{
 		$this->load->view("Travels/travel_plan_details");
+	}
+	public function join()
+	{
+		$this->Travel->join($this->session->userdata('user_id'), $this->uri->segment(3));
+		redirect("/Travels/")
 	}
 }

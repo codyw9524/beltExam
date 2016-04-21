@@ -80,4 +80,10 @@ class Travel extends CI_Model {
 				JOIN users on users.id = travels_users.user_id
 				WHERE users.id != ?;", array($user_id))->result_array();
 	}
+	public function join_trip($user_id, $travel_id)
+	{
+		$query = "INSERT INTO travels_users (user_id, travel_id) VALUES (?,?)";
+		$values = array($user_id, $travel_id);
+		$this->db->query($query, $values);
+	}
 }	

@@ -70,7 +70,7 @@
 							echo "<td>" . $trip['destination'] . "</td>\n";
 							echo "<td>" . $trip['start_date'] . "</td>\n";
 							echo "<td>" . $trip['end_date'] . "</td>\n";
-							echo "<td><a href='/Travels/join'>Join</a></td>\n";
+							echo "<td><a href='/Travels/join/" . $trip['travels_id'] . "'>Join</a></td>\n";
 							echo "</tr>\n";
 						}
 						echo "</tbody>\n";
