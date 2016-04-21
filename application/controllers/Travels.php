@@ -36,7 +36,7 @@ class Travels extends CI_Controller {
 	}
 	public function join()
 	{
-		$this->Travel->join($this->session->userdata('user_id'), $this->uri->segment(3));
+		$this->Travel->join_trip($this->session->userdata('user_id'), $this->uri->segment(3));
 		redirect("/Travels/");
 	}
 }
