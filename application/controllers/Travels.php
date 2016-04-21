@@ -27,6 +27,6 @@ class Travels extends CI_Controller {
 	}
 	public function show()
 	{
-		$this->load->view("Travels/travel_plan_details")
+		$this->load->view("Travels/travel_plan_details");
 	}
 }
