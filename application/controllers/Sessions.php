@@ -15,7 +15,14 @@ class Sessions extends CI_Controller {
 	public function create()
 	{
 		$this->Session->create($this->input->post());
-		redirect("/");
+		if($this->session->flashdata('error'))
+		{
+			redirect("/");
+		}
+		else
+		{
+			redirect("/Travels/");
+		}
 	}
 
 }

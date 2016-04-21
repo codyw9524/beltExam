@@ -16,7 +16,6 @@ class Session extends CI_Model {
 								'is_logged_in' => TRUE
 								);
 			$this->session->set_userdata($user_info);
-			$this->session->set_flashdata('registration_confirmed', "<p class='confirm'>Thank you for registering.  You may now log in</p>");
 		}
 		else
 		{
