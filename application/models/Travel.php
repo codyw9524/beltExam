@@ -26,14 +26,14 @@ class Travel extends CI_Model {
 		}
 		else
 		{
-			$this->Travel->create($this->input->post());
+			$this->Travel->create($this->input->post(), $this->session->userdata('user_id');
 			return TRUE;
 		}
 	}
-	public function create($post)
+	public function create($post, $user_id)
 	{
-		$query1 = "INSERT INTO travels (destination, description, start_date, end_date, updated_at, created_at) VALUES (?, ?, ?, ?, NOW(), NOW())";
-		$values = array(htmlspecialchars($post['destination']), htmlspecialchars($post['description']), $post['start_date'], $post['end_date']);
+		$query1 = "INSERT INTO travels (destination, description, start_date, end_date, creator_id, updated_at, created_at) VALUES (?, ?, ?, ?, NOW(), NOW())";
+		$values = array(htmlspecialchars($post['destination']), htmlspecialchars($post['description']), $post['start_date'], $post['end_date'], $user_id);
 		$this->db->query($query1, $values);
 
 		$travel_id = $this->db->query("SELECT * FROM travels ORDER BY id DESC LIMIT 1")->row_array();
