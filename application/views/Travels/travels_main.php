@@ -33,6 +33,8 @@
 						echo "<tbody>\n";
 						foreach ($session_user_trips as $trip) 
 						{
+							$travels = [];
+							array_push($travels, $trip['travels_id']);
 							echo "<tr>\n";
 							echo "<td><a href='/Travels/show/" . $trip['travels_id'] . "'>" . $trip['destination'] . "</td>\n";
 							echo "<td>" . $trip['start_date'] . "</td>\n";
@@ -42,7 +44,6 @@
 						}
 						echo "</tbody>\n";
 						echo "</table>\n";
-
 					}
 				?>
 			</div>
@@ -67,7 +68,14 @@
 						{
 							echo "<tr>\n";
 							echo "<td>" . $trip['name'] . "</a></td>\n";
-							echo "<td><a href='/Travels/show/" . $trip['travels_id'] . "'>" . $trip['destination'] . "</td>\n";
+							if(in_array($travels, $trip['travels_id']) === TRUE)
+							{
+								echo "<td>Joined!</td>\n";
+							}
+							else
+							{
+								echo "<td><a href='/Travels/show/" . $trip['travels_id'] . "'>" . $trip['destination'] . "</td>\n";
+							}
 							echo "<td>" . $trip['start_date'] . "</td>\n";
 							echo "<td>" . $trip['end_date'] . "</td>\n";
 							echo "<td><a href='/Travels/join/" . $trip['travels_id'] . "'>Join</a></td>\n";
