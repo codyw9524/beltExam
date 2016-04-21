@@ -51,7 +51,15 @@
 			<div class="col-md-7">
 				<h2>Other users joining the trip</h2>
 				<?php
-					//make a table to show other users on the same destination trip
+					if(isset($others))
+					{
+						echo "<ul>\n";
+						foreach ($others as $other) 
+						{
+							echo "<li>" . $other['name'] . "</li>\n";
+						}
+						echo "</ul>\n";
+					}
 				?>
 			</div>
 		</div>

@@ -102,4 +102,23 @@ class Travel extends CI_Model {
 								JOIN travels ON travels.creator_id = users.id
 								WHERE travels.id = ?;", array($travel_id))->row_array();
 	}
+	public function other_users_on_trip($travel_id)
+	{
+		return $this->db->query("SELECT
+									travels.id as 'travels_id',
+								    travels.creator_id as 'travels_cr_id',
+									travels.destination,
+								    travels.description,
+								    travels.start_date,
+								    travels.end_date,
+								    travels_users.user_id as 't_v_user_id',
+								    travels_users.travel_id as 't_v_travel_id',
+									users.id as 'users_id',
+									CONCAT(users.first_name, ' ', users.last_name) as 'name',
+								    users.username  
+								FROM travels
+								JOIN travels_users on travels.id = travels_users.travel_id
+								JOIN users on users.id = travels_users.user_id
+								WHERE travels.id = ? AND travels.creator_id != users.id;", array($travel_id))->result_array();
+	}
 }	
