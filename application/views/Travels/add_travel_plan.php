@@ -31,7 +31,7 @@
 		</div><!-- end of row-->
 		<div class="row">
 			<div class="col-md-6">
-				<form class="form-horizontal" action="Travels/create" method="post">
+				<form class="form-horizontal" action="/Travels/create" method="post">
 					<div class="form-group">
 						<label for="destination" class="col-sm-3 control-label">Desitnation</label>
 						<div class="col-sm-9">
