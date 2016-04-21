@@ -19,7 +19,7 @@ class User extends CI_Model {
 	}
 	public function show($username)
 	{
-		return $this->db->query("SELECT * FROM users WHERE username = ?", array($email['username']))->row_array();
+		return $this->db->query("SELECT * FROM users WHERE username = ?", array($username['username2']))->row_array();
 	}
 
 	public function register_validation()
