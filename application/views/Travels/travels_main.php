@@ -19,6 +19,32 @@
 		<div class="row">
 			<div class="col-md-8">
 				<h4>Your Trip Schedules</h4>
+				<?php
+					if(isset($session_user_trips))
+					{
+						echo "<table class='table'>\n";
+						echo "<thead>\n";
+						echo "<tr>\n";
+						echo "<th>Destination</th>\n";
+						echo "<th>Start Date</th>\n";
+						echo "<th>End Date</th>\n";
+						echo "<th>Plan</th>\n";
+						echo "</thead>\n";
+						echo "<tbody>\n";
+						foreach ($session_user_trips as $trip) 
+						{
+							echo "<tr>\n";
+							echo "<td>" . $trip['destination'] . "</td>\n";
+							echo "<td>" . $trip['start_date'] . "</td>\n";
+							echo "<td>" . $trip['end_date'] . "</td>\n";
+							echo "<td>" . $trip['description'] . "</td>\n";
+							echo "</tr>\n";
+						}
+						echo "</tbody>\n";
+						echo "</table>\n";
+
+					}
+				?>
 			</div>
 		</div><!-- end of row -->
 		<div class="row">
