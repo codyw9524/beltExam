@@ -78,7 +78,8 @@ class Travel extends CI_Model {
 				FROM travels
 				JOIN travels_users on travels.id = travels_users.travel_id
 				JOIN users on users.id = travels_users.user_id
-				WHERE users.id != ?;", array($user_id))->result_array();
+				WHERE users.id != ?
+				GROUP BY users.id;", array($user_id))->result_array();
 	}
 	public function join_trip($user_id, $travel_id)
 	{
