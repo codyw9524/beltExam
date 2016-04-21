@@ -68,17 +68,17 @@
 						{
 							echo "<tr>\n";
 							echo "<td>" . $trip['name'] . "</a></td>\n";
+							echo "<td><a href='/Travels/show/" . $trip['travels_id'] . "'>" . $trip['destination'] . "</td>\n";
+							echo "<td>" . $trip['start_date'] . "</td>\n";
+							echo "<td>" . $trip['end_date'] . "</td>\n";
 							if(in_array($trip['travels_id'], $travels) === TRUE)
 							{
 								echo "<td>Joined!</td>\n";
 							}
 							else
 							{
-								echo "<td><a href='/Travels/show/" . $trip['travels_id'] . "'>" . $trip['destination'] . "</td>\n";
-							}
-							echo "<td>" . $trip['start_date'] . "</td>\n";
-							echo "<td>" . $trip['end_date'] . "</td>\n";
 							echo "<td><a href='/Travels/join/" . $trip['travels_id'] . "'>Join</a></td>\n";
+							}
 							echo "</tr>\n";
 						}
 						echo "</tbody>\n";
