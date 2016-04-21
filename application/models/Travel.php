@@ -62,4 +62,22 @@ class Travel extends CI_Model {
 		$values = array($user_id);
 		return $this->db->query($query, $values)->result_array();
 	}
+	public function show($user_id)
+	{
+		return $this->db->query("SELECT
+					travels.id as 'travels_id',
+					travels.destination,
+				    travels.description,
+				    travels.start_date,
+				    travels.end_date,
+				    travels_users.user_id as 't_v_user_id',
+				    travels_users.travel_id as 't_v_travel_id',
+					users.id as 'users_id',
+					CONCAT(users.first_name, ' ', users.last_name) as 'name',
+				    users.username  
+				FROM travels
+				JOIN travels_users on travels.id = travels_users.travel_id
+				JOIN users on users.id = travels_users.user_id
+				WHERE users.id != ?;", array($user_id))->result_array();
+	}
 }	

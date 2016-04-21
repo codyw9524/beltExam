@@ -1,8 +1,3 @@
-<?php
- var_dump($this->session->userdata());
- var_dump($session_user_trips);
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -55,6 +50,34 @@
 		<div class="row">
 			<div class="cold-md-11">
 				<h4>Other User's Travel Plans</h4>
+				<?php
+					if(isset($session_user_trips))
+					{
+						echo "<table class='table'>\n";
+						echo "<thead>\n";
+						echo "<tr>\n";
+						echo "<th>Name</th>\n";
+						echo "<th>Destination</th>\n";
+						echo "<th>Start Date</th>\n";
+						echo "<th>End Date</th>\n";
+						echo "<th>Do You Want to Join?</th>\n";
+						echo "</thead>\n";
+						echo "<tbody>\n";
+						foreach ($all_user_trips as $trip) 
+						{
+							echo "<tr>\n";
+							echo "<td>" . $trip['name'] . "</td>\n";
+							echo "<td>" . $trip['destination'] . "</td>\n";
+							echo "<td>" . $trip['start_date'] . "</td>\n";
+							echo "<td>" . $trip['end_date'] . "</td>\n";
+							echo "<td><a href='/Travels/join'>Join</a></td>\n";
+							echo "</tr>\n";
+						}
+						echo "</tbody>\n";
+						echo "</table>\n";
+					}
+
+				?>
 			</div>
 		</div><!-- end of row -->
 		<div class="row">
