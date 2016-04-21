@@ -23,6 +23,7 @@
 		<div class="page-header">
 			<h2>Hello, <?= $this->session->userdata('first_name') ?></h2>
 			<a href="/Sessions/destroy">Log Off</a>
+			<a href="/Travels/">Home</a>
 		</div><!-- end of page-header -->
 		<div class="row">
 			<div class="col-md-12">
