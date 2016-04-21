@@ -17,9 +17,9 @@ class User extends CI_Model {
 		$values = array(htmlspecialchars($post['first_name']), htmlspecialchars($post['last_name']), htmlspecialchars($post['username']), password_hash($post['password'], PASSWORD_DEFAULT));
 		$this->db->query($query, $values);
 	}
-	public function show($email)
+	public function show($username)
 	{
-		return $this->db->query("SELECT * FROM users WHERE email = ?", array($email['email']))->row_array();
+		return $this->db->query("SELECT * FROM users WHERE username = ?", array($email['username']))->row_array();
 	}
 
 	public function register_validation()
