@@ -89,6 +89,17 @@ class Travel extends CI_Model {
 	}
 	public function show_by_travel_id($travel_id)
 	{
-		return $this->db->query("SELECT * FROM travels WHERE id = ?", array($travel_id))->row_array();
+		return $this->db->query("SELECT 
+									travels.id as 'travels_id',
+									users.id as 'users_id',
+								    CONCAT(users.first_name, ' ', users.last_name) as 'name',
+								    travels.destination,
+								    travels.description,
+								    travels.start_date,
+								    travels.end_date,
+								    travels.creator_id
+								FROM users
+								JOIN travels ON travels.creator_id = users.id
+								WHERE travels.id = ?;", array($travel_id))->row_array();
 	}
 }	

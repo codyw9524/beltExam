@@ -1,7 +1,3 @@
-<?php
-var_dump($destinations);
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,9 +20,30 @@ var_dump($destinations);
 		</div>
 		<div class="row">
 			<div class="col-md-7">
-				<h2>DB QUERY FOR DESTINATION NAME</h2>
+				<h2><?= $destinations['destination'] ?></h2>
 				<?php
-					//make a table to display destination info
+					if(isset($destinations))
+					{
+						echo "<table class='table'>\n";
+						echo "<tr>\n";
+						echo "<td>Planned by:</td>\n";
+						echo "<td>" . $destinations['name'] . "</td>\n";
+						echo "</tr>\n";
+						echo "<tr>\n";
+						echo "<td>Description:</td>\n";
+						echo "<td>" . $destinations['description'] . "</td>\n";
+						echo "</tr>\n";
+						echo "<tr>\n";
+						echo "<td>Start Date:</td>\n";
+						echo "<td>" . $destinations['start_date'] . "</td>\n";
+						echo "</tr>\n";
+						echo "</tr>\n";
+						echo "<tr>\n";
+						echo "<td>End Date:</td>\n";
+						echo "<td>" . $destinations['end_date'] . "</td>\n";
+						echo "</tr>\n";
+						echo "</table>\n";
+					}
 				?>
 			</div>
 		</div><!-- end of row-->
