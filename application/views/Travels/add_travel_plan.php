@@ -14,6 +14,7 @@
 	<script>
 		$(document).ready(function(){
 			$("#start_date").datepicker();
+			$("#end_date").datepicker();
 		});
 	</script>
 </head>
@@ -45,6 +46,14 @@
 							<input type="text" id="start_date" name="start_date">
 						</div>
 					</div>
+					<div class="form-group">
+						<label for="end_date" class="col-sm-3 control-label">End Date</label>
+						<div class="col-sm-9">
+							<input type="text" id="end_date" name="end_date">
+						</div>
+					</div>
+					<button type="submit" class="btn btn-primary">Add Plan</button>
+					<div style="clear: both;"></div>
 				</form>
 			</div>
 		</div>
