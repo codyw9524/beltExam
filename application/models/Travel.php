@@ -60,6 +60,6 @@ class Travel extends CI_Model {
 				JOIN users on users.id = travels_users.user_id
 				WHERE users.id = ?;";
 		$values = array($user_id);
-		return $this->db->query($query, $values);
+		return $this->db->query($query, $values)->result_array();
 	}
 }	
