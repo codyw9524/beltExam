@@ -20,3 +20,7 @@ p.confirm{
 		float: right;
 		margin-top: 30px;
 	}
+.add_travel_plan_link{
+	font-size: 1.3em;
+	float: right;
+}

@@ -16,6 +16,21 @@
 			<h2>SESSION NAME</h2>
 			<a href="/Sessions/destroy">Log Off</a>
 		</div>
-	</div>
+		<div class="row">
+			<div class="col-md-8">
+				<h4>Your Trip Schedules</h4>
+			</div>
+		</div><!-- end of row -->
+		<div class="row">
+			<div class="cold-md-11">
+				<h4>Other User's Travel Plans</h4>
+			</div>
+		</div><!-- end of row -->
+		<div class="row">
+			<div class="col-md-12">
+				<a class="add_travel_plan_link" href="/Travels/add">Add Travel Plan</a>
+			</div>
+		</div>
+	</div><!-- end of container -->
 </body>
 </html>

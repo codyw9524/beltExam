@@ -24,5 +24,10 @@ class Sessions extends CI_Controller {
 			redirect("/Travels/");
 		}
 	}
+	public function destroy()
+	{
+		$this->session->sess_destroy();
+		redirect("/");
+	}
 
 }
