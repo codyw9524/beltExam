@@ -13,6 +13,4 @@ class Users extends CI_Controller {
 		$this->User->register_validation();
 		redirect("/");
 	}
-
-
 }
