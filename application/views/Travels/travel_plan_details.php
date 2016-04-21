@@ -38,7 +38,6 @@
 						echo "<td>Start Date:</td>\n";
 						echo "<td>" . $destinations['start_date'] . "</td>\n";
 						echo "</tr>\n";
-						echo "</tr>\n";
 						echo "<tr>\n";
 						echo "<td>End Date:</td>\n";
 						echo "<td>" . $destinations['end_date'] . "</td>\n";
