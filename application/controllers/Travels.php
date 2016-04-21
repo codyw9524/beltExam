@@ -18,6 +18,7 @@ class Travels extends CI_Controller {
 		if($this->input->post())
 		{
 			$this->Travel->create($this->input->post());
+			redirect("/Travels/");
 		}
 		else
 		{
