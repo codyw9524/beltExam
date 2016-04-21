@@ -36,10 +36,10 @@
 						</div>
 					</div>
 					<div class="form-group">
-						<label for="email" class="col-sm-3 control-label">Email</label>
+						<label for="username" class="col-sm-3 control-label">Username</label>
 						<div class="col-sm-9">
-							<input type="text" id="email" name="email" class="form-control">
-							<?= $this->session->flashdata('email') ?>
+							<input type="text" id="username" name="username" class="form-control">
+							<?= $this->session->flashdata('username') ?>
 						</div>
 					</div>
 					<div class="form-group">
