@@ -34,7 +34,7 @@
 						foreach ($session_user_trips as $trip) 
 						{
 							echo "<tr>\n";
-							echo "<td><a href='/Travels/show/" . $trip['id'] . "'>" . $trip['destination'] . "</td>\n";
+							echo "<td><a href='/Travels/show/" . $trip['travels_id'] . "'>" . $trip['destination'] . "</td>\n";
 							echo "<td>" . $trip['start_date'] . "</td>\n";
 							echo "<td>" . $trip['end_date'] . "</td>\n";
 							echo "<td>" . $trip['description'] . "</td>\n";
@@ -67,7 +67,7 @@
 						{
 							echo "<tr>\n";
 							echo "<td>" . $trip['name'] . "</a></td>\n";
-							echo "<td><a href='/Travels/show/" . $trip['id'] . "'>" . $trip['destination'] . "</td>\n";
+							echo "<td><a href='/Travels/show/" . $trip['travels_id'] . "'>" . $trip['destination'] . "</td>\n";
 							echo "<td>" . $trip['start_date'] . "</td>\n";
 							echo "<td>" . $trip['end_date'] . "</td>\n";
 							echo "<td><a href='/Travels/join/" . $trip['travels_id'] . "'>Join</a></td>\n";
