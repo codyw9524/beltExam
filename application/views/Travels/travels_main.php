@@ -34,7 +34,7 @@
 						echo "<tbody>\n";
 						foreach ($session_user_trips as $trip) 
 						{
-							array_push($travels, $trip['travels_id']);
+							array_push($trip['travels_id'], $travels);
 							echo "<tr>\n";
 							echo "<td><a href='/Travels/show/" . $trip['travels_id'] . "'>" . $trip['destination'] . "</td>\n";
 							echo "<td>" . $trip['start_date'] . "</td>\n";
