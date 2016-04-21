@@ -1,3 +1,8 @@
+<?php
+ var_dump($this->session->userdata());
+ var_dump($session_user_trips);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
