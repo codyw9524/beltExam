@@ -40,7 +40,7 @@ class Travel extends CI_Model {
 	}
 	public function create($post, $user_id)
 	{
-		$query1 = "INSERT INTO travels (destination, description, start_date, end_date, creator_id, updated_at, created_at) VALUES (?, ?, ?, ?, NOW(), NOW())";
+		$query1 = "INSERT INTO travels (destination, description, start_date, end_date, creator_id, updated_at, created_at) VALUES (?, ?, ?, ?, ?,NOW(), NOW())";
 		$values = array(htmlspecialchars($post['destination']), htmlspecialchars($post['description']), $post['start_date'], $post['end_date'], $user_id);
 		$this->db->query($query1, $values);
 
