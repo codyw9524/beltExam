@@ -13,8 +13,16 @@
 	<link rel="stylesheet" href="/assets/css/style.css">
 	<script>
 		$(document).ready(function(){
-			$("#start_date").datepicker({minDate : -0});
-			$("#end_date").datepicker({minDate: -0});
+			$("#start_date").datepicker({
+				onClose: function(selectedDate) {
+					$("#end_date").datepicker("option", "minDate", selectedDate);
+			 	}
+			});
+			$("#end_date").datepicker({
+				onClose: function(selectedDate){
+					$("#start_date").datepicker("option", "maxDate", selectedDate)
+				}
+			});
 		});
 	</script>
 </head>
