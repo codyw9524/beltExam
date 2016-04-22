@@ -12,7 +12,10 @@ class Travel extends CI_Model {
 	}
 
 	public function add_trip_validation()
-	{
+	{	
+		$today = new DateTime(date("Y-m-d"));
+		$start_date = new DateTime($this->input->post('start_date'));
+		$end_date = new DateTime($this->input->post('end-date'));
 		$this->form_validate_rules();
 		if($this->form_validation->run() === FALSE)
 		{	
@@ -22,6 +25,11 @@ class Travel extends CI_Model {
 							'end_date' => form_error('end_date')
 							);
 			$this->session->set_flashdata($errors);
+			return FALSE;
+		}
+		else if($start_date < $today || $end_date < $start_date)
+		{
+			$this->session->set_flashdata('date error', "<p>Dates are invalid</p>");
 			return FALSE;
 		}
 		else

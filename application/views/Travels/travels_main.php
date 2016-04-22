@@ -84,7 +84,6 @@
 						echo "</tbody>\n";
 						echo "</table>\n";
 					}
-
 				?>
 			</div>
 		</div><!-- end of row -->

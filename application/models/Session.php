@@ -11,8 +11,8 @@ class Session extends CI_Model {
 		{
 			$user_info = array('user_id' => $user['id'],
 								'first_name' => $user['first_name'],
-								'last_name' => $user['last_name'],
-								'email' => $user['email'],
+								'username' => $user['username'],
+								'username' => $user['username'],
 								'is_logged_in' => TRUE
 								);
 			$this->session->set_userdata($user_info);

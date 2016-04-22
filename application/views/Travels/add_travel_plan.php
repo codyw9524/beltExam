@@ -59,6 +59,7 @@
 						<div class="col-sm-9">
 							<input type="text" id="end_date" name="end_date">
 							<?= $this->session->flashdata('end_date') ?>
+							<?= $this->session->flashdata('date error') ?>
 						</div>
 					</div>
 					<button id="add_plan_btn" type="submit" class="btn btn-primary">Add Plan</button>
