@@ -14,6 +14,7 @@
 	<script>
 		$(document).ready(function(){
 			$("#start_date").datepicker({
+				minDate : -0,
 				onClose: function(selectedDate) {
 					$("#end_date").datepicker("option", "minDate", selectedDate);
 			 	}
